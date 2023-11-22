@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="Dapper" Version="2.0.143" />
+        <PackageReference Include="FastEndpoints" Version="5.15.0" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="5.15.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.7" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\common\StatGenius.Common\StatGenius.Common.csproj" />
+      <ProjectReference Include="..\..\datafeed\StatGenius.DataFeed.SportMonks\StatGenius.DataFeed.SportMonks.csproj" />
+    </ItemGroup>
+
+
+
+
+</Project>
